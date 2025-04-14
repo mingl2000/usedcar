@@ -1,18 +1,8 @@
 # usedcar
-### Business Understanding
-    The bsuiness wants to find what impact used car price most and how.
-####  Data Observation
-    - Model column has a lot of discret values. 7% of the values in this column contributes to 80% of the records. 
-        - Replace all other models not in the top models found here will reduce the one-hot encoding columns by 27000. 
-    - Id and VIN column are not price related and should be dropped from modeling process
-    
-### Data Preparation
-    - Drop ID and VIN column which won't have any impact to price.
-    - All null values for non-numerical columns are replaced by "other" which seems to be the default value for these columns.
-    - All null values for numerical columns are replaced by 0
-    - All models in model column not in the top 7% of the models are replaced by "other". This reduces the one-hot encoding columns by 27000. It signficently reduce the processing time and hardware requirements
-
-### Modeling
+### Link to the notebook:
+    - https://github.com/mingl2000/usedcar.git
+### Summary of findings:
+    - 
     - The following models are studied:
         - Linear regression 
         - PolynomialFeatures
@@ -30,13 +20,15 @@
 
 
 ### Valuation
-    -  The model tests clearly show that the Lasso selection model got the lowest mean square value for both training and testing. 
+    -  The model tests clearly show that the Lasso selection model got the lowest mean square value for both training and testing among the training and testing of the following models:
+        - Linear regression 
+        - PolynomialFeatures
+        - Ridge regression
+        - Lasso
+        - SequentialFeatureSelector
+        - Feature selection using Lasso
+        
     -  Top feature selected by this model are ploynomail of year and features mostly. If diesel is used as fule, it has strong impact as well.      
-
-### Deployment
-
-    Based on the finding, we can use the Lasso selection model to select the features and then use the Linear Regression model to predict the price.
-
 
 #### What's learned
     Model has 29000+ discret values. This turns out to be the biggest chanllenge for SequentialFeatureSelector model.
