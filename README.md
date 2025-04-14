@@ -1,7 +1,7 @@
 # usedcar
 ### Link to the notebook:
-    - https://github.com/mingl2000/usedcar.git
-    
+    - <a href="https://github.com/mingl2000/usedcar.git" target="_top">used car</a>
+
 ### Summary of findings:
     -  The model tests clearly show that the Lasso selection model got the lowest mean square value for both training and testing among the training and testing of the following models:
         - Linear regression 
