@@ -1,25 +1,8 @@
 # usedcar
 ### Link to the notebook:
     - https://github.com/mingl2000/usedcar.git
+    
 ### Summary of findings:
-    - 
-    - The following models are studied:
-        - Linear regression 
-        - PolynomialFeatures
-        - Ridge regression
-        - Lasso
-        - SequentialFeatureSelector
-        - Feature selection using Lasso
-    -  polynomial of year and odometer are used in the following models:
-        - PolynomialFeatures
-        - Lasso
-        - SequentialFeatureSelector
-        - Feature selection using Lasso
-    - OrdinalEncoder is used for condition column
-    - OneHotEncoder is used for all other non-numerical columns.
-
-
-### Valuation
     -  The model tests clearly show that the Lasso selection model got the lowest mean square value for both training and testing among the training and testing of the following models:
         - Linear regression 
         - PolynomialFeatures
@@ -27,7 +10,6 @@
         - Lasso
         - SequentialFeatureSelector
         - Feature selection using Lasso
-        
     -  Top feature selected by this model are ploynomail of year and features mostly. If diesel is used as fule, it has strong impact as well.      
 
 #### What's learned
